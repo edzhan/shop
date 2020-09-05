@@ -1,46 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Главная</title>
+    <title>Home Page</title>
     {% load static %}
-
-    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'ficon/apple-icon-57x57.png' %}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'ficon/apple-icon-60x60.png' %}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'ficon/apple-icon-72x72.png' %}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'ficon/apple-icon-76x76.png' %}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'ficon/apple-icon-114x114.png' %}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'ficon/apple-icon-120x120.png' %}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'ficon/apple-icon-144x144.png' %}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'ficon/apple-icon-152x152.png' %}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'ficon/apple-icon-180x180.png' %}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'ficon/android-icon-192x192.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'ficon/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'ficon/favicon-96x96.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'ficon/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static 'ficon/manifest.json' %}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{% static 'ficon/ms-icon-144x144.png' %}">
-    <meta name="theme-color" content="#ffffff">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" media="screen">
-    <link href="{% static 'css/flexslider.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/item.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'css/flexslider.css" rel="stylesheet" type="text/css' %}">
+    <link href="{% static 'css/item.css" rel="stylesheet' %}" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{% static 'font/font-awesome/css/font-awesome.min.css' %}">
 </head>
 <body>
 
+<!-- header -->
 <div class="hwrap">
     <div class="container">
         <header class="row">
             <!-- logo -->
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 logo"><a href="{% url 'home' %}"><img
-                    src="{% static 'images/fish_logo.png' %}" alt="">
-                {#                        <span class="themecolor">Shopi</span>licious#}
-            </a></div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 logo"><a href="index.html"><span
+                    class="themecolor">Shopi</span>licious</a></div>
             <!-- END logo -->
             <div class="visible-xs clearfix"></div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 ">
@@ -63,15 +43,15 @@
                                 <!-- END nav first level item -->
                                 <!-- nav second level items -->
                                 <ul class="level2">
-                                    <li><a href="{% url 'home' %}">Index</a></li>
-                                    <li><a href="{% static 'index_full.html' %}">Index 2</a></li>
-                                    {#                                            <li><a href="{% url 'listing-grid.html' %}">Listing page - grid</a></li>#}
-                                    <li><a href="{% static 'listing-list.html' %}">Listing page - list</a></li>
-                                    <li><a href="{% static 'item.html' %}">Item page</a></li>
-                                    <li><a href="{% static 'item-reviews.html' %}">Item page - reviews</a></li>
-                                    <li><a href="{% static 'cart.html' %}">Cart</a></li>
-                                    <li><a href="{% static 'checkout.html' %}">Checkout</a></li>
-                                    <li><a href="{% static 'news.html' %}">News</a></li>
+                                    <li><a href="index.html">Index</a></li>
+                                    <li><a href="index2.html">Index 2</a></li>
+                                    <li><a href="listing-grid.html">Listing page - grid</a></li>
+                                    <li><a href="listing-list.html">Listing page - list</a></li>
+                                    <li><a href="item.html">Item page</a></li>
+                                    <li><a href="item-reviews.html">Item page - reviews</a></li>
+                                    <li><a href="cart.html">Cart</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="news.html">News</a></li>
                                 </ul>
                                 <!-- END nav second level items -->
                             </li>
@@ -189,176 +169,166 @@
                 <!-- END search dropdown -->
 
             </div>
-
-            <!-- cart dropdown -->
-            <div class="floatleft cart dropdown">
-                <a href="#" data-toggle="dropdown"><i class="icon-shopping-cart"></i><span class="badge">3</span></a>
-                <div class="dropdown-menu">
-                    <form role="form">
-                        <div class="clearfix">
-                            <div class="row ">
-                                <div class="col-lg-12 mcarttop">
-                                    <h2>Cart</h2>
-                                </div>
-                            </div>
-                            <div class="mt30 product clearfix">
-                                <div class="img pull-left">&nbsp;</div>
-                                <div class="details pull-left">
-                                    <div class="name">Printed Kurta</div>
-                                    <div class="desc">Women's Product</div>
-                                    <div class="price">$45</div>
-                                </div>
-                                <div class="looclose pull-left"><a href="#"><i class="icon-remove"></i></a></div>
-                            </div>
-                            <div class="mt30 product clearfix">
-                                <div class="img pull-left">&nbsp;</div>
-                                <div class="details pull-left">
-                                    <div class="name">Printed Kurta</div>
-                                    <div class="desc">Women's Product</div>
-                                    <div class="price">$45</div>
-                                </div>
-                                <div class="looclose pull-left"><a href="#"><i class="icon-remove"></i></a></div>
-                            </div>
-                            <div class="mt30 product clearfix">
-                                <div class="img pull-left">&nbsp;</div>
-                                <div class="details pull-left">
-                                    <div class="name">Printed Kurta</div>
-                                    <div class="desc">Women's Product</div>
-                                    <div class="price">$45</div>
-                                </div>
-                                <div class="looclose pull-left"><a href="#"><i class="icon-remove"></i></a></div>
-                            </div>
-                            <div class="row mcartbot">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <button type="submit" class="btn btn-default">continue</button>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <button type="submit" class="btn btn-primary">checkout</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+            <div class="visible-xs clearfix"></div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                <div class="floatleft wcurrency">
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle currency" data-toggle="dropdown">
+                            &#36; <i class="icon-chevron-down"></i>
+                        </button>
+                    </div>
                 </div>
+
+                <!-- cart dropdown -->
+                <div class="floatleft cart dropdown">
+                    <a href="#" data-toggle="dropdown"><i class="icon-shopping-cart"></i></a><span
+                        class="badge">3</span>
+                    <div class="dropdown-menu">
+                        <form role="form">
+                            <div class="clearfix">
+                                <div class="row ">
+                                    <div class="col-lg-12 mcarttop">
+                                        <h2>Cart</h2>
+                                    </div>
+                                </div>
+                                <div class="mt30 product clearfix">
+                                    <div class="img pull-left">&nbsp;</div>
+                                    <div class="details pull-left">
+                                        <div class="name">Printed Kurta</div>
+                                        <div class="desc">Women's Product</div>
+                                        <div class="price">$45</div>
+                                    </div>
+                                    <div class="looclose pull-left"><a href="#"><i class="icon-remove"></i></a></div>
+                                </div>
+                                <div class="mt30 product clearfix">
+                                    <div class="img pull-left">&nbsp;</div>
+                                    <div class="details pull-left">
+                                        <div class="name">Printed Kurta</div>
+                                        <div class="desc">Women's Product</div>
+                                        <div class="price">$45</div>
+                                    </div>
+                                    <div class="looclose pull-left"><a href="#"><i class="icon-remove"></i></a></div>
+                                </div>
+                                <div class="mt30 product clearfix">
+                                    <div class="img pull-left">&nbsp;</div>
+                                    <div class="details pull-left">
+                                        <div class="name">Printed Kurta</div>
+                                        <div class="desc">Women's Product</div>
+                                        <div class="price">$45</div>
+                                    </div>
+                                    <div class="looclose pull-left"><a href="#"><i class="icon-remove"></i></a></div>
+                                </div>
+                                <div class="row mcartbot">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <button type="submit" class="btn btn-default">continue</button>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <button type="submit" class="btn btn-primary">checkout</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- END cart dropdown -->
+
+
+                <!-- account dropdown -->
+                <div class="floatleft account dropdown">
+                    <a href="#" data-toggle="dropdown"><i class="icon-lock"></i></a>
+                    <div class="dropdown-menu">
+                        <form role="form">
+                            <div class="cont clearfix">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2>Login</h2>
+                                    </div>
+                                </div>
+                                <div class="row mt30">
+                                    <div class="col-lg-12">
+                                        <input type="text" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="row mt15">
+                                    <div class="col-lg-12">
+                                        <input type="password" class="form-control" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="row checkbox mt30">
+                                    <div class="col-xs-offset-1 col-xs-1 col-lg-offset-1 col-lg-1">
+                                        <input type="checkbox" id="rememverlogin">
+                                    </div>
+                                    <div class="col-xs-10 col-lg-8 rememverlogin">
+                                        <label for="rememverlogin">Remember My Login</label>
+                                    </div>
+                                </div>
+
+                                <div class="row mt30">
+                                    <div class="col-lg-12">
+                                        <button type="submit" class="btn btn-primary">login</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- END account dropdown -->
+
             </div>
-            <!-- END cart dropdown -->
-
-            {#                    <div class="visible-xs clearfix"></div>#}
-            {#                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">    #}
-            {#                        <div class="floatleft wcurrency">#}
-            {#                            <!-- Single button -->#}
-            {#                            <div class="btn-group">#}
-            {#                                <button type="button" class="btn btn-default dropdown-toggle currency" data-toggle="dropdown">#}
-            {#                                    &#37; <i class="icon-chevron-down"></i>#}
-            {#                                </button>#}
-            {#                            </div>#}
-            {#                        </div>#}
+        </header>
+    </div>
+</div>
 
 
-            <!-- account dropdown -->
-            <div class="floatleft account dropdown">
-                <a href="#" data-toggle="dropdown"><i class="icon-lock"></i></a>
-                <div class="dropdown-menu">
-                    <form role="form">
-                        <div class="cont clearfix">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h2>Вход / Регистрация</h2>
-                                </div>
-                            </div>
-                            <div class="row mt30">
-                                <div class="col-lg-12">
-                                    <input type="text" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="row mt15">
-                                <div class="col-lg-12">
-                                    <input type="password" class="form-control" placeholder="Пароль">
-                                </div>
-                            </div>
-
-                            {#                                        <div class="row checkbox mt30">#}
-                            {#                                            <div class="col-xs-offset-1 col-xs-1 col-lg-offset-1 col-lg-1">#}
-                            {#                                                <input type="checkbox" id="rememverlogin"> #}
-                            {#                                            </div>#}
-                            {#                                            <div class="col-xs-10 col-lg-8 rememverlogin">#}
-                            {#                                                <label for="rememverlogin">Запомнить</label>#}
-                            {#                                            </div>#}
-                            {#                                        </div>#}
-
-                            <div class="row mt30">
-                                <div class="col-lg-12">
-                                    <button type="submit" class="btn btn-primary">вход</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+<!-- slider -->
+<div class="flexslider">
+    <ul class="slides">
+        <li>
+            <a href="#">
+                <img src="images/slide1.jpg"/>
+                <span class="gradient hidden-xs hidden-sm"></span>
+            </a>
+            <div class="text hidden-xs">
+                <h3>Women's section</h3>
+                <p>Choose from our wide selection of women's
+                    clothes, heels, ballets, flip flops, casual shirts,
+                    shrugs, jackets & many more.</p>
+                <a href="#">Browse</a>
             </div>
-            <!-- END account dropdown -->
-
-    </div>
-    </header>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/slide2.jpg"/>
+                <span class="gradient hidden-xs hidden-sm"></span>
+            </a>
+            <div class="text hidden-xs">
+                <h3>Women's section #2</h3>
+                <p>Choose from our wide selection of women's
+                    clothes, heels, ballets, flip flops, casual shirts,
+                    shrugs, jackets & many more.</p>
+                <a href="#">Browse</a>
+            </div>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/slide3.jpg"/>
+                <span class="gradient hidden-xs hidden-sm"></span>
+            </a>
+            <div class="text hidden-xs">
+                <h3>Women's section #3</h3>
+                <p>Choose from our wide selection of women's
+                    clothes, heels, ballets, flip flops, casual shirts,
+                    shrugs, jackets & many more.</p>
+                <a href="#">Browse</a>
+            </div>
+        </li>
+    </ul>
 </div>
-</div>
+<!-- END slider -->
 
-<section class="slider-home2-2 clearfix">
-
-    <div class="flexslider">
-        <ul class="slides">
-            <li>
-                <div class="slide">
-                    <img src="{% static 'images/slide1.jpg' %}" alt="" width="100%"/>
-
-                    <div class="textblock hidden-xs">
-                        <h3>Women's section</h3>
-                        <p>Choose from our wide selection of women's
-                            clothes, heels, ballets, flip flops, casual shirts,
-                            shrugs, jackets & many more.</p>
-                        <a href="#" class="">Browse</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="slide">
-                    <img src="{% static 'images/slide2.jpg' %}" alt="" width="100%"/>
-
-                    <div class="textblock hidden-xs">
-                        <h3>Women's section #2 </h3>
-                        <p>Choose from our wide selection of women's
-                            clothes, heels, ballets, flip flops, casual shirts,
-                            shrugs, jackets & many more.</p>
-                        <a href="#" class="">Browse</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="slide">
-                    <img src="{% static 'images/slide3.jpg' %}" alt="" width="100%"/>
-
-                    <div class="textblock hidden-xs">
-                        <h3>Women's section #3</h3>
-                        <p>Choose from our wide selection of women's
-                            clothes, heels, ballets, flip flops, casual shirts,
-                            shrugs, jackets & many more.</p>
-                        <a href="#" class="">Browse</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!--
-    <div class="text clearfix">
-        <div class="heading row">
-            <div class="col-lg-9"><h3>Women's section</h3> </div><div class="col-lg-3 prevnext"><a href="#"><i class="icon-chevron-left"></i></a> <a href="#"><i class="icon-chevron-right"></i></a></div>
-        </div>
-        <p>Choose from our wide selection of women's
-            clothes, heels, ballets, flip flops, casual shirts,
-            shrugs, jackets & many more.</p>
-        <a href="#" class="btn-primary btn-lg">Browse</a>
-        <div>&nbsp;</div>
-    </div>
-    -->
-</section>
+<!-- END header -->
 
 <div class="container">
     <section class="content row">
@@ -372,7 +342,7 @@
 
             <div class="col-sm-6 col-md-3 col-lg-3 fitem">
                 <div class="item">
-                    <a href="#"><img src="{% static 'images/featuredimg1.jpg' %}" alt="" width="100%"/></a>
+                    <a href="#"><img src="images/featuredimg1.jpg" alt="" width="100%"/></a>
                     <div class="item-details clearfix">
                         <p class="name">
                             Karigari Women's Leggings
@@ -407,7 +377,7 @@
 
             <div class="col-sm-6 col-md-3 col-lg-3 fitem">
                 <div class="item">
-                    <a href="#"><img src="{% static 'images/featuredimg2.jpg' %}" alt="" width="100%"/></a>
+                    <a href="#"><img src="images/featuredimg2.jpg" alt="" width="100%"/></a>
                     <div class="item-details clearfix">
                         <p class="name">
                             Bazel Embroidered
@@ -442,7 +412,7 @@
 
             <div class="col-sm-6 col-md-3 col-lg-3 fitem">
                 <div class="item">
-                    <a href="#"><img src="{% static 'images/featuredimg3.jpg' %}" alt="" width="100%"/></a>
+                    <a href="#"><img src="images/featuredimg3.jpg" alt="" width="100%"/></a>
                     <div class="item-details clearfix">
                         <p class="name">
                             Neels Self Design
@@ -477,7 +447,7 @@
 
             <div class="col-sm-6 col-md-3 col-lg-3 fitem">
                 <div class="item">
-                    <a href="#"><img src="{% static 'images/featuredimg4.jpg' %}" alt="" width="100%"/></a>
+                    <a href="#"><img src="images/featuredimg4.jpg" alt="" width="100%"/></a>
                     <div class="item-details clearfix">
                         <p class="name">
                             Anahi Printed Kurta
@@ -520,11 +490,17 @@
 
                 <!-- bestseller item -->
                 <div class="row bestselleritem">
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#"><img
-                            src="{% static 'images/bestimg1.jpg' %}" alt="" width="100%"/></a></div>
-                    <div class="col-xs-4 col-sm-4 col-md-8 col-lg-4 bestsellerdetails">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#"><img src="images/bestimg1.jpg" alt=""
+                                                                                      width="100%"/></a></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 bestsellerdetails">
                         <div class="name">Product name</div>
-                        <div class="inventory">Items Left - 50</div>
+                        <div class="inventory">Items Left -50</div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 btnicon mo"><a href="#"><i class="icon-heart"></i></a>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 btnicon mo"><a href="#"><i class="icon-refresh"></i></a>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 btnicon cart mo"><a href="#" class="themecolor"><i
+                                class="icon-shopping-cart"></i></a></div>
                         <div class="rating">Rating - <i class="icon-star"></i> <i class="icon-star"></i> <i
                                 class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i></div>
                     </div>
@@ -541,11 +517,17 @@
 
                 <!-- bestseller item -->
                 <div class="row bestselleritem">
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#"><img
-                            src="{% static 'images/bestimg1.jpg' %}" alt="" width="100%"/></a></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#"><img src="images/bestimg1.jpg" alt=""
+                                                                                      width="100%"/></a></div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 bestsellerdetails">
                         <div class="name">Product name</div>
-                        <div class="inventory">Items Left - 50</div>
+                        <div class="inventory">Items Left -50</div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 btnicon mo"><a href="#"><i class="icon-heart"></i></a>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 btnicon mo"><a href="#"><i class="icon-refresh"></i></a>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 btnicon cart mo"><a href="#" class="themecolor"><i
+                                class="icon-shopping-cart"></i></a></div>
                         <div class="rating">Rating - <i class="icon-star"></i> <i class="icon-star"></i> <i
                                 class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i></div>
                     </div>
@@ -562,11 +544,17 @@
 
                 <!-- bestseller item -->
                 <div class="row bestselleritem">
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="{% static 'images/bestimg1.jpg' %}"
-                                                                          alt="" width="100%"/></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="images/bestimg1.jpg" alt=""
+                                                                          width="100%"/></div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 bestsellerdetails">
                         <div class="name">Product name</div>
-                        <div class="inventory">Items Left - 50</div>
+                        <div class="inventory">Items Left -50</div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 btnicon mo"><a href="#"><i class="icon-heart"></i></a>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 btnicon mo"><a href="#"><i class="icon-refresh"></i></a>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 btnicon cart mo"><a href="#" class="themecolor"><i
+                                class="icon-shopping-cart"></i></a></div>
                         <div class="rating">Rating - <i class="icon-star"></i> <i class="icon-star"></i> <i
                                 class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i></div>
                     </div>
@@ -595,7 +583,7 @@
 
                     <div class="col-sm-12 col-md-4 col-lg-4 fitem">
                         <div class="item">
-                            <a href="#"><img src="{% static 'images/weeklyimg1.jpg' %}" alt="" width="100%"/></a>
+                            <a href="#"><img src="images/weeklyimg1.jpg" alt="" width="100%"/></a>
                             <div class="item-details clearfix">
                                 <p class="name">
                                     Leep Printed Women's Boxer
@@ -628,7 +616,7 @@
 
                     <div class="col-md-4 col-lg-4 fitem hidden-sm">
                         <div class="item">
-                            <a href="#"><img src="{% static 'images/weeklyimg2.jpg' %}" alt="" width="100%"/></a>
+                            <a href="#"><img src="images/weeklyimg2.jpg" alt="" width="100%"/></a>
                             <div class="item-details clearfix">
                                 <p class="name">
                                     Karigari Women's Kurta
@@ -661,7 +649,7 @@
 
                     <div class="col-md-4 col-lg-4 fitem hidden-sm">
                         <div class="item">
-                            <a href="#"><img src="{% static 'images/weeklyimg3.jpg' %}" alt="" width="100%"/></a>
+                            <a href="#"><img src="images/weeklyimg3.jpg" alt="" width="100%"/></a>
                             <div class="item-details clearfix">
                                 <p class="name">
                                     Bazel Embroidered
@@ -701,7 +689,7 @@
         <section class="bottominfo">
             <div class="col-sm-6 col-md-3 col-lg-3 gomobile">
                 <h2>go mobile</h2>
-                <a href="#"><img src="{% static 'images/gomobile.jpg' %}" alt="" width="100%"/></a>
+                <a href="#"><img src="images/gomobile.jpg" alt="" width="100%"/></a>
                 <div class="clearfix">
                     <div class="gomobile1 pull-left">
                         <div class="caption14">Shop on the go</div>
@@ -769,7 +757,6 @@
     </section>
 
 </div>
-
 <footer>
     <div class="container">
         <div class="row">
@@ -852,11 +839,11 @@
     </div>
 </footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="js/bootstrap.min.js"></script>
 
-<script src="{% static 'js/jquery.flexslider.js' %}"></script>
+<script src="js/jquery.flexslider.js"></script>
 
 <script type="text/javascript" charset="utf-8">
     $(window).load(function () {
@@ -864,8 +851,8 @@
             {
                 animation: 'slide',
                 controlNav: false,
-                prevText: '<i class="icon-chevron-left"></i>', //String: Set the text for the "previous" directionNav item
-                nextText: '<i class="icon-chevron-right"></i>' //String: Set the text for the "next" directionNav item
+                prevText: '<div class="circle"><i class="icon-chevron-left\"></i></div>', //String: Set the text for the "previous" directionNav item
+                nextText: '<div class="circle"><i class="icon-chevron-right\"></i></div>' //String: Set the text for the "next" directionNav item
             }
         );
     });
@@ -873,11 +860,11 @@
 
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="{% static 'js/respond.min.js' %}"></script>
+<!--<script src="js/respond.min.js"></script>-->
 
-<script src="{% static 'js/item.js' %}"></script>
+<script src="js/item.js"></script>
 
-<script src="{% static 'js/retina.js' %}"></script>
+<script src="js/retina.js"></script>
 
 </body>
 </html>
